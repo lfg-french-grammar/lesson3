@@ -1,0 +1,287 @@
+BASIC   FRENCH   CONFIG (1.0)
+  ROOTCAT   S. 
+  LEXENTRIES   (BASIC FRENCH).
+  RULES   (BASIC FRENCH).
+  GOVERNABLERELATIONS SUBJ OBJ OBJ2 OBL XCOMP.
+  SEMANTICFUNCTIONS ADJ.
+  CHARACTERENCODING utf-8.
+
+----
+
+BASIC   FRENCH   RULES (1.0)
+
+   "R1"   S --> (NP: (^ SUBJ)=!) VP.	
+
+   "R2"   VP --> V' (NP: (^ OBJ)=!) (PP: { (^ XCOMP)=! | (^ OBJ2)=! | (^ OBL)=!}) (AP: (^ XCOMP)=!).
+
+   "R3"	  V' --> (CL: (^ SUBJ)=!) V.
+
+   "R4" NP --> D 
+ 	  (A: ! $ (^ ADJ)
+	      (^ PRED) = (! SUBJ PRED))
+ 	  N: ^=! (^ PERS)=3.	
+
+   "R5"   PP --> { P NP: (^ OBJ)=! | PA N | P NP}.
+
+   "R6"	  AP --> A.
+
+----
+
+BASIC FRENCH LEXICON (1.0)
+
+attend 	  V * { (^ PRED)='ATTENDRE<(^ SUBJ)(^ OBJ)>' |
+		(^ PRED)='ATTENDRE<(^ SUBJ)>'}
+	      (^ SUBJ PERS)=3
+	      (^ SUBJ NUM)=SG.
+`
+attendent V * { (^ PRED)='ATTENDRE<(^ SUBJ)(^ OBJ)>' |
+		(^ PRED)='ATTENDRE<(^ SUBJ)>'}
+	      (^ SUBJ PERS)=3
+	      (^ SUBJ NUM)=PL.
+
+cherche   V * (^ PRED)='CHERCHER<(^ SUBJ)(^ OBJ)>'
+	      {(^ SUBJ PERS)=1 | (^ SUBJ PERS)=3}
+	      (^ SUBJ NUM)=SG.
+
+cherches   V * (^ PRED)='CHERCHER<(^ SUBJ)(^ OBJ)>'
+	      (^ SUBJ PERS)=2
+	      (^ SUBJ NUM)=SG.
+
+cherchons   V * (^ PRED)='CHERCHER<(^ SUBJ)(^ OBJ)>'
+	      (^ SUBJ PERS)=1
+	      (^ SUBJ NUM)=PL.
+
+cherchez   V * (^ PRED)='CHERCHER<(^ SUBJ)(^ OBJ)>'
+	      (^ SUBJ PERS)=2
+	      (^ SUBJ NUM)=PL.
+
+cherchent   V * (^ PRED)='CHERCHER<(^ SUBJ)(^ OBJ)>'
+	      (^ SUBJ PERS)=3
+	      (^ SUBJ NUM)=PL.
+
+dépend 	  V * (^ PRED)='DÉPENDRE<(^ SUBJ)(^ OBL)>'
+	      (^ OBL CASE)="c" DE
+	      (^ SUBJ PERS)=3
+	      (^ SUBJ NUM)=SG.
+
+donne 	  V * {(^ PRED)='DONNER<(^ SUBJ)(^ OBJ)(^ OBJ2)>' 
+		(^ OBJ2 CASE)=c À |
+		(^ PRED)='DONNER<(^ SUBJ)(^ OBJ)>'}
+	      {(^ SUBJ PERS)=1 | (^ SUBJ PERS)=3 }
+	      (^ SUBJ NUM)=SG.
+
+est 	  V * (^ PRED)='ÊTRE<(^ SUBJ)(^ XCOMP)>'
+	      (^ SUBJ)=(^ XCOMP SUBJ)
+	      @(CAT (^ XCOMP) {AP PP})
+	      (^ SUBJ PERS)=3
+	      (^ SUBJ NUM)=SG.
+
+sont 	  V * (^ PRED)='ÊTRE<(^ SUBJ)(^ XCOMP)>'
+	      (^ SUBJ)=(^ XCOMP SUBJ)
+	      @(CAT (^ XCOMP) {AP PP})
+	      (^ SUBJ PERS)=3
+	      (^ SUBJ NUM)=PL.
+
+semble 	  V * (^ PRED)='SEMBLER<(^ SUBJ)(^ XCOMP)>'
+	      (^ SUBJ)=(^ XCOMP SUBJ)
+	      @(CAT (^ XCOMP) AP)
+	      (^ SUBJ PERS)=3
+	      (^ SUBJ NUM)=SG.
+
+passe 	  V * { (^ PRED)='PASSER<(^ SUBJ)>' |
+		(^ PRED)='PASSER<(^ OBJ)>(^ SUBJ)'
+		(^ SUBJ FORM)=c IL }
+	      (^ SUBJ PERS)=3
+	      (^ SUBJ NUM)=SG.
+
+passent   V * (^ PRED)='PASSER<(^ SUBJ)>'
+	      (^ SUBJ PERS)=3
+	      (^ SUBJ NUM)=PL.
+
+pleut 	  V * (^ PRED)='PLEUVOIR<>(^ SUBJ)'
+	      (^ SUBJ FORM)=c IL
+	      (^ SUBJ PERS)=3
+	      (^ SUBJ NUM)=SG.
+
+"(^ SUBJ PRON-TYPE)=c EXPL"
+"pleut 	  V * (^ PRED)='PLEUVOIR<>(^ SUBJ)'
+	      ~ (^ SUBJ PRED)
+	      (^ SUBJ PERS)=3
+	      (^ SUBJ NUM)=SG."
+
+fée 	  N * (^ PRED)='FÉE'
+	      (^ GEN)=FEM 
+	      (^ NUM)=SG.
+
+fées 	  N * (^ PRED)='FÉE'
+	      (^ GEN)=FEM
+	      (^ NUM)=PL.
+
+chemise   N * (^ PRED)='CHEMISE'
+	      (^ GEN)=FEM 
+	      (^ NUM)=SG.
+
+chemises  N * (^ PRED)='CHEMISE'
+	      (^ GEN)=FEM
+	      (^ NUM)=PL.
+
+chevalier N * (^ PRED)='CHEVALIER'
+	      (^ GEN)=MAS 
+	      (^ NUM)=SG.
+
+chevaliers N * (^ PRED)='CHEVALIER'
+	       (^ GEN)=MAS 
+	       (^ NUM)=PL.
+
+foulard   N * (^ PRED)='FOULARD'
+	      (^ GEN)=MAS 
+	      (^ NUM)=SG.
+
+gant   N * (^ PRED)='GANT'
+	      (^ GEN)=MAS 
+	      (^ NUM)=SG.
+
+livre   N * (^ PRED)='LIVRE'
+	      (^ GEN)=MAS 
+	      (^ NUM)=SG.
+
+livres   N * (^ PRED)='LIVRE'
+	      (^ GEN)=MAS 
+	      (^ NUM)=PL.
+
+dame 	  N * (^ PRED)='DAME'
+	      (^ GEN)=FEM 
+	      (^ NUM)=SG.
+
+dames 	  N * (^ PRED)='DAME'
+	      (^ GEN)=FEM 
+	      (^ NUM)=PL.
+
+chambre   N * (^ PRED)='CHAMBRE'
+	      (^ GEN)=FEM
+	      (^ NUM)=SG. 
+
+poche   N * (^ PRED)='POCHE'
+	      (^ GEN)=FEM
+	      (^ NUM)=SG. 
+	      
+je 	  CL * (^ PRED)='PRO'
+	       (^ NUM)=SG
+	       (^ PERS)=1
+	       (^ CASE)=NOM.
+
+tu 	  CL * (^ PRED)='PRO'
+	       (^ NUM)=SG
+	       (^ PERS)=2
+	       (^ CASE)=NOM.
+
+elle 	  CL * (^ PRED)='PRO'
+	       (^ GEN)=FEM
+	       (^ NUM)=SG
+	       (^ PERS)=3
+	       (^ CASE)=NOM.
+
+il 	  CL * { (^ PRED)='PRO' | (^ FORM) = IL}
+	       (^ GEN)=MAS
+	       (^ NUM)=SG
+	       (^ PERS)=3
+	       (^ CASE)=NOM.
+
+nous 	  CL * (^ PRED)='PRO'
+	       (^ NUM)=PL
+	       (^ PERS)=1
+	       (^ CASE)=NOM.
+
+vous 	  CL * (^ PRED)='PRO'
+	       (^ NUM)=PL
+	       (^ PERS)=2
+	       (^ CASE)=NOM.
+
+ils 	  CL * (^ PRED)='PRO'
+	       (^ NUM)=PL
+	       (^ PERS)=3
+	       (^ CASE)=NOM.
+
+elles 	  CL * (^ PRED)='PRO'
+	       (^ GEN)=FEM
+	       (^ NUM)=PL
+	       (^ PERS)=3
+	       (^ CASE)=NOM.
+
+aimable   A * (^ PRED)='AIMABLE<(^ SUBJ)>'
+	      (^ SUBJ NUM)=SG.
+
+aimables  A * (^ PRED)='AIMABLE<(^ SUBJ)>'
+	      (^ SUBJ NUM)=PL.
+
+belle 	  A * (^ PRED)='BEAU<(^ SUBJ)>'
+	      (^ SUBJ GEN)=FEM
+	      (^ SUBJ NUM)=SG.
+
+belles 	  A * (^ PRED)='BEAU<(^ SUBJ)>'
+	      (^ SUBJ NUM)=PL.
+
+une 	  D * (^ GEN)=FEM 
+	      (^ NUM)=SG
+	      (^ SPEC)=INDEF.
+
+un 	  D * (^ GEN)=MAS 
+	      (^ NUM)=SG
+	      (^ SPEC)=INDEF.
+
+des 	  D * (^ NUM)=PL
+	      (^ SPEC)=INDEF;
+	  PA * (^ CASE)=DE
+	       (^ SPEC)=INDEF
+	       (^ NUM)=PL.
+
+la 	  D * (^ GEN)=FEM 
+	      (^ NUM)=SG
+	      (^ SPEC)=DEF.
+
+le 	  D * (^ GEN)=MAS 
+	      (^ NUM)=SG
+	      (^ SPEC)=DEF.
+
+les 	  D * (^ NUM)=PL
+	      (^ SPEC)=DEF.
+
+cette 	  D * (^ GEN)=FEM
+	      (^ NUM)=SG
+	      (^ SPEC)=DEM.
+
+ces 	  D * (^ NUM)=PL
+	      (^ SPEC)=DEM.
+
+son 	  D * (^ GEN)=MAS
+	      (^ NUM)=SG
+	      (^ POSS PRED)='PRO'
+	      (^ POSS NUM)=SG
+	      (^ POSS PERS)=3
+	      (^ SPEC)=DEF.
+
+sa 	  D * (^ GEN)=FEM
+	      (^ NUM)=SG
+	      (^ POSS PRED)='PRO'
+	      (^ POSS NUM)=SG
+	      (^ POSS PERS)=3
+	      (^ SPEC)=DEF.
+
+ses 	  D * (^ NUM)=PL
+	      (^ POSS PRED)='PRO'
+	      (^ POSS NUM)=SG
+	      (^ POSS PERS)=3
+	      (^ SPEC)=DEF.
+
+dans 	  P * (^ PRED)='DANS<(^ SUBJ)(^ OBJ)>'.
+
+à 	  P * (^ CASE)=À.
+
+de 	  P * (^ CASE)=DE.
+
+au 	  PA * (^ CASE)=À
+	       (^ SPEC)=DEF
+	       (^ GEN)=MAS
+	       (^ NUM)=SG.
+
+----

@@ -1,0 +1,69 @@
+# SENTENCE_ID: 001
+
+la fée est aimable (1 0.01 12)
+
+# SENTENCE_ID: 002
+
+cette dame est dans la chambre (1 0.00 18)
+
+# SENTENCE_ID: 003
+
+la fée semble aimable (1 0.00 12)
+
+# SENTENCE_ID: 004
+
+la dame donne son foulard au chevalier (1 0.01 19)
+
+# SENTENCE_ID: 005
+
+la dame donne son foulard (1 0.01 14)
+
+# SENTENCE_ID: 006
+
+la belle dame donne son gant au chevalier (1 0.00 21)
+
+# SENTENCE_ID: 007
+
+le chevalier donne son foulard à la dame (1 0.01 24)
+
+# SENTENCE_ID: 008
+
+le chevalier donne sa chemise à la dame (1 0.00 24)
+
+# SENTENCE_ID: 009
+
+le chevalier donne ses livres à la belle dame (1 0.01 26)
+
+# SENTENCE_ID: 010
+
+le chevalier dépend de la dame (1 0.00 19)
+
+# SENTENCE_ID: 011
+
+la fée attend (1 0.00 9)
+
+# SENTENCE_ID: 012
+
+la fée attend ces chevaliers (1 0.00 14)
+
+# SENTENCE_ID: 013
+
+des chevaliers passent (1 0.01 9)
+
+# SENTENCE_ID: 014
+
+il passe des chevaliers (1 0.00 11)
+
+# SENTENCE_ID: 015
+
+le chevalier passe (1 0.00 9)
+
+# SENTENCE_ID: 016
+
+il passe (1 0.00 6)
+
+# SENTENCE_ID: 017
+
+il pleut (1 0.00 6)
+
+# 17 sentences, 0.06 CPU secs total, 0.01 CPU secs max (06/03/16)

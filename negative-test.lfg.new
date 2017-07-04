@@ -1,0 +1,77 @@
+# SENTENCE_ID: 001
+
+la fée semble dans la chambre (0 0.00 18)
+
+# SENTENCE_ID: 002
+
+ces dames est dans la chambre (0 0.02 18)
+
+# SENTENCE_ID: 003
+
+cette dame son dans la chambre (0 0.00 0)
+
+# SENTENCE_ID: 004
+
+la dame donne à la fée (0 0.00 19)
+
+# SENTENCE_ID: 005
+
+la dame donne son foulard le chevalier (0 0.00 0)
+
+# SENTENCE_ID: 006
+
+la dame donne son foulard à le chevalier (1 0.01 24)
+
+# SENTENCE_ID: 007
+
+la dame donne sa foulard au chevalier (0 0.00 12)
+
+# SENTENCE_ID: 008
+
+le chevalier donne son gant au dame (0 0.00 17)
+
+# SENTENCE_ID: 009
+
+le chevalier donne sa gant à la dame (0 0.01 12)
+
+# SENTENCE_ID: 010
+
+le chevalier donne ses livre à la dame (0 0.00 12)
+
+# SENTENCE_ID: 011
+
+les fées attend (0 0.01 9)
+
+# SENTENCE_ID: 012
+
+la fée attendent les chevaliers (0 0.01 14)
+
+# SENTENCE_ID: 013
+
+il passent (0 0.00 4)
+
+# SENTENCE_ID: 014
+
+elle passe des chevaliers (0 0.00 0)
+
+# SENTENCE_ID: 015
+
+passe des chevaliers (0 0.00 0)
+
+# SENTENCE_ID: 016
+
+le chevalier passent (0 0.01 9)
+
+# SENTENCE_ID: 017
+
+ils passe (0 0.00 4)
+
+# SENTENCE_ID: 018
+
+elle pleut (0 0.00 0)
+
+# SENTENCE_ID: 019
+
+la dame pleut (0 0.00 0)
+
+# 19 sentences, 0.07 CPU secs total, 0.02 CPU secs max (06/03/16)
